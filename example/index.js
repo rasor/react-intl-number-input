@@ -8,7 +8,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      value: 0,
+      value: 12.34,
       maskedValue: 0,
     }
 
@@ -31,6 +31,8 @@ class App extends React.Component {
           <IntlNumberInput
             precision={4}
             onChange={this.handleChange}
+            value={this.state.value}
+            disabled={true}
           />
         </p>
         <p>
@@ -52,6 +54,7 @@ class App extends React.Component {
             prefix="R$ "
             precision={2}
             onChange={this.handleChange}
+            value={this.state.value}
           />
         </p>
         <p>
